@@ -1,11 +1,17 @@
 #Quanto lucra uma padaria por pão feito
-print("Quantos pães poderá fazer?")
 
+def receita():
+   print("Pronto para aprender fazer pães? Aperte qualquer tecla: ")
+   input("")
+   print("A receita para fazer 1 pão é:\n 1 Ovo \n 5 colheres de Açúcar \n 1 colher de sopa de sal \n 1 kg de farinha de trigo \n 2 tabletes de fermento...")
+
+receita()
+print("Quantos pães fará hoje? ")
 ovo = int(input("Quantos ovos? "))
 
 sugar = int(input("Quantas colheres de açúcar? "))
 
-trigo = int(input("Quantos kg de trigo? "))
+trigo = int(input("Quantos kg de farinha de trigo? "))
 
 sal = int(input("Quantas colheres de Sal? "))
 
