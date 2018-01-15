@@ -38,15 +38,15 @@ apresentacao()
 input("")
 receita()
 def make():
-  ovo = int(input("Quantos ovos? "))
+  ovo = int(input(init['PERGUNTAS']['ovo']))
                                           
-  sugar = int(input("Quantas colheres de açúcar? "))
+  sugar = int(input(init['PERGUNTAS']['acucar']))
 
-  trigo = int(input("Quantos kg de farinha de trigo? "))
+  trigo = int(input(init['PERGUNTAS']['trigo']))
 
-  sal = int(input("Quantas colheres de Sal? "))
+  sal = int(input(init['PERGUNTAS']['sal']))
 
-  fermento = int(input("Quantos tabletes de fermento? "))
+  fermento = int(input(init['PERGUNTAS']['fermento']))
 
   fazerpao(ovo,sugar,trigo,sal,fermento)
 make()
