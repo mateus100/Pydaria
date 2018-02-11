@@ -5,7 +5,7 @@ init = configparser.ConfigParser()
 init.read_file(open('receita.ini'))
 
 def apresentacao():
-    nome = input("Olá qual é o seu nome? ")    
+    nome = input("Olá qual é o seu nome? ")
     print(f'Como vai {nome}?')
     print(f'Você {nome} agora trabalha para uma padaria\n{nome}Pronto para aprender fazer pães?\nAperte a tecla ENTER: ')
     input("")
@@ -23,28 +23,28 @@ def fazerpao(ovo, sugar, trigo, sal, fermento):
            return "Veja se o açúcar e sal são o suficientes \n ou o fermento pode está em falta"
     else:
         return "Ingredientes insufissientes"
-    
+
     pao = ovo + sugar + trigo + sal + fermento
 
     if pao < 9:
         return "O pão saiu ruim, deve está faltando alguma coisa..."
     elif pao >= 10:
         result = pao / 9
-        return "O total de pães são %d " %(result) 
-       
+        return f'O total de pães são {result}'
+
 apresentacao()
 
 receita()
 def make():
-  ovo = int(input(init['PERGUNTAS']['ovo'] ))
-                                          
-  sugar = int(input(init['PERGUNTAS']['acucar'] ))
+  ovo = int(input(f'{init["PERGUNTAS"]["ovo"]} ' ))
 
-  trigo = int(input(init['PERGUNTAS']['trigo'] ))
+  sugar = int(input(f'{init["PERGUNTAS"]["acucar"]} ' ))
 
-  sal = int(input(init['PERGUNTAS']['sal'] ))
+  trigo = int(input(f'{init["PERGUNTAS"]["trigo"]} '))
 
-  fermento = int(input(init['PERGUNTAS']['fermento'] ))
+  sal = int(input(f'{init["PERGUNTAS"]["sal"]} ' ))
+
+  fermento = int(input(f'{init["PERGUNTAS"]["fermento"]} '))
 
   print(fazerpao(ovo,sugar,trigo,sal,fermento))
 make()
